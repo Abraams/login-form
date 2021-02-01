@@ -1,0 +1,31 @@
+$text-color--primary: #2C2738;
+$text-color--active: #7C9CBF;
+$text-color--gray: #756F86;
+$text-color--gray-light: #b6b4bd;
+$text-color--error: #FF7171;
+$text-color--success: #7cbf98;
+
+$color-active: #0880AE;
+$color-active-light: #EBF4F8;
+
+// ---
+
+$button-color--primary: $color-active;
+$button-color--primary-hover: lighten($button-color--primary, 3%);
+$button-color--primary-active: lighten($button-color--primary, 6%);
+$button-color--primary-text: $color-active-light;
+
+// ---
+
+$button-color--link: $color-active;
+$button-color--link-hover: lighten($button-color--link, 12%);
+$button-color--link-active: darken($button-color--link, 3%);
+
+// ---
+
+$border-radius--default: 6px;
+$border-radius--medium: 16px;
+$border-radius--large: 24px;
+
+$card-border-radius: $border-radius--large;
+$input-border-radius: $border-radius--default;
