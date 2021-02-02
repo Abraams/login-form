@@ -5,11 +5,12 @@
       { [`base-button--${props.type}`]: props.type },
       { [`base-button--${props.shape}`]: props.shape },
       { 'base-button--block': props.block },
-      { 'base-button--disabled': data.attrs && data.attrs.disabled },
+      { 'base-button--disabled': data.attrs && props.disabled },
       { 'base-button--loading': props.loading },
     ]"
     v-bind="data.attrs"
-    :type="props.submit"
+    :disabled="props.disabled"
+    :type="props.submit && 'submit'"
     v-on="listeners"
   >
     <span>
@@ -79,6 +80,7 @@ export default Vue.extend({
     outline: none;
     cursor: pointer;
     transition: all .12s ease-in-out;
+    overflow: hidden;
 
     &--block {
       width: 100%;
@@ -87,7 +89,7 @@ export default Vue.extend({
     &:not(&--link) {
       padding: 0 65px;
       min-height: 56px;
-      border-radius: $input-border-radius;
+      border-radius: $border-radius--default;
       box-shadow: 0px 2px 4px rgba(37, 32, 49, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
     }
 
@@ -96,7 +98,7 @@ export default Vue.extend({
       border: 1px solid $text-color--gray-light;
 
       &:hover {
-        border-width: 2px;
+        border-width: 1px;
         border-color: $button-color--primary;
         color: $button-color--primary;
       }
@@ -125,6 +127,23 @@ export default Vue.extend({
       &:active {
         color: $button-color--link-active;
       }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+      color: rgba(0,0,0,.25) !important;
+      background-color: #f5f5f5 !important;
+      border-color: #d9d9d9 !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    &--rounded {
+      border-radius: $border-radius--medium  !important;
+    }
+
+    &--circle {
+      border-radius: 10em  !important;
     }
     // border-radius: 6px;
 

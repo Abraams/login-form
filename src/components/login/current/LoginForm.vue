@@ -7,7 +7,7 @@
       <LoginSelectLanguage v-model="form.language"/>
 
       <BaseFormItem>
-        <span><BaseButton type="link">Отправить</BaseButton> dasdaw</span>
+        <BaseButton block type="primary" submit >Отправить</BaseButton>
       </BaseFormItem>
 
     </form>

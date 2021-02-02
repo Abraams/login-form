@@ -1,12 +1,12 @@
-$text-color--primary: #2C2738;
-$text-color--active: #7C9CBF;
-$text-color--gray: #756F86;
+$text-color--primary: #2c2738;
+$text-color--active: #7c9cbf;
+$text-color--gray: #756f86;
 $text-color--gray-light: #b6b4bd;
-$text-color--error: #FF7171;
+$text-color--error: #ff7171;
 $text-color--success: #7cbf98;
 
-$color-active: #0880AE;
-$color-active-light: #EBF4F8;
+$color-active: #0880ae;
+$color-active-light: #ebf4f8;
 
 // ---
 
@@ -24,7 +24,7 @@ $button-color--link-active: darken($button-color--link, 3%);
 // ---
 
 $border-radius--default: 6px;
-$border-radius--medium: 16px;
+$border-radius--medium: 12px;
 $border-radius--large: 24px;
 
 $card-border-radius: $border-radius--large;
